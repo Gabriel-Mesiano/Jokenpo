@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="582dp"
-        android:layout_height="825dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,103 +19,106 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="sans-serif"
-        android:text="Jokenpô!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        android:typeface="monospace"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imgPapel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="12dp"
-        android:onClick="escolherPapel"
-        app:layout_constraintEnd_toStartOf="@+id/imgTesoura"
-        app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toEndOf="@+id/imgPedra"
-        app:layout_constraintTop_toBottomOf="@+id/txtEscolha"
-        app:srcCompat="@drawable/papel" />
-
-    <ImageView
-        android:id="@+id/imgJogadaBot"
-        android:layout_width="198dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/branco" />
-
-    <TextView
-        android:id="@+id/txtEscolha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Faça a sua jogada!"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgJogadaBot" />
-
-    <ImageView
-        android:id="@+id/imgTesoura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="20dp"
-        android:onClick="escolherTesoura"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEscolha"
-        app:srcCompat="@drawable/tesoura" />
-
-    <TextView
-        android:id="@+id/txtResultado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="76dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/imgPedra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="68dp"
-        android:onClick="escolherPedra"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEscolha"
-        app:srcCompat="@drawable/pedra" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginTop="32sp"
+            android:fontFamily="sans-serif"
+            android:text="Jokenpô!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
 
-    <TextView
-        android:id="@+id/txtTabela"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0 : 0"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/imgJogadaBot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/txtTabela"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="0 : 0"
+            android:textSize="34sp" />
 
+        <ImageView
+            android:id="@+id/imgJogadaBot"
+            android:layout_width="200sp"
+            android:layout_height="0dp"
+            android:layout_weight="2.3"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/branco" />
+
+        <TextView
+            android:id="@+id/txtEscolha"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:text="Faça a sua jogada!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgJogadaBot" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/txtEscolha"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPapel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32sp"
+                android:layout_marginRight="32sp"
+                android:onClick="escolherPapel"
+                app:srcCompat="@drawable/papel" />
+
+            <ImageView
+                android:id="@+id/imgTesoura"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="escolherTesoura"
+                app:srcCompat="@drawable/tesoura" />
+
+            <ImageView
+                android:id="@+id/imgPedra"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="32sp"
+                android:layout_marginRight="32sp"
+                android:onClick="escolherPedra"
+                app:srcCompat="@drawable/pedra" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32sp"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
